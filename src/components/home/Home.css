@@ -76,11 +76,11 @@
     width: 100% !important;
   }
   .businessFirstIcons {
-    width: 40px !important;
-  }
-  .businessSecondIcons {
     width: 53px !important;
   }
+  /* .businessSecondIcons {
+    width: 53px !important;
+  } */
   .carousalDiv {
     flex-direction: column !important;
   }

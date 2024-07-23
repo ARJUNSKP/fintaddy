@@ -12,6 +12,7 @@ function Home() {
   const { hash } = useLocation();
   const navigate = useNavigate();
   const [navMenu, setNavMenu] = useState(false);
+  const [hoverIndex, setHoverIndex] = useState(null);
 
   useEffect(() => {
     navigate("/");
@@ -21,18 +22,21 @@ function Home() {
   const innovativeCard = [
     {
       icon: "/assets/home/innovativeIcon1.svg",
+      icon1: "/assets/home/innovativeIcon4.svg",
       title: "Innovative Solutions",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
       icon: "/assets/home/innovativeIcon2.svg",
+      icon1: "/assets/home/innovativeIcon5.svg",
       title: "Professional Team",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
       icon: "/assets/home/innovativeIcon3.svg",
+      icon1: "/assets/home/innovativeIcon6.svg",
       title: "24x7 Support",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -324,10 +328,12 @@ function Home() {
                   gap: "1rem",
                   border: "5px",
                 }}
+                onMouseEnter={() => setHoverIndex(index)}
+                onMouseLeave={() => setHoverIndex(null)}
               >
                 <div style={{ width: "45px" }}>
                   <img
-                    src={item?.icon}
+                    src={hoverIndex === index ? item?.icon1 : item?.icon}
                     alt="..."
                     style={{
                       width: "100%",
