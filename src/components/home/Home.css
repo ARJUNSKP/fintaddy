@@ -1,0 +1,107 @@
+.cardDiv:hover {
+  scale: 1.2;
+  background-color: #1f81db;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+.totalPadding {
+  padding: 0 3.5rem;
+}
+.cardDiv {
+  scale: 1;
+}
+.inputFiledWidth {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #cde7ff;
+  border: none;
+  border-radius: 5px;
+}
+.inputFiledWidth::placeholder {
+  color: #656565;
+}
+.headerTextAfter {
+  color: #ee1d65;
+  border-bottom: 3px solid #ee1d65;
+}
+.navBarNotDisplay {
+  display: none;
+}
+.imagePosition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .mainHome {
+    flex-direction: column !important;
+  }
+  .mainSubDiv {
+    width: 100% !important;
+  }
+  .mainSubDiv img {
+    width: 50% !important;
+  }
+  .mainHomeDiv {
+    /* padding: 0 1rem !important; */
+  }
+  .headingDiv {
+    flex-direction: column !important;
+    padding: 0 1rem;
+  }
+  .cardMainDiv {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .headingNavigating {
+    width: 100% !important;
+  }
+  .descriptionValues {
+    width: 70% !important;
+  }
+  .experienceDiv {
+    flex-direction: column !important;
+  }
+  .experienceSubDiv {
+    width: 100% !important;
+  }
+  .businessTiringMainDiv {
+    flex-direction: column;
+  }
+  .subDivBusiness {
+    width: 100% !important;
+  }
+  .businessFirstIcons {
+    width: 40px !important;
+  }
+  .businessSecondIcons {
+    width: 40px !important;
+  }
+  .carousalDiv {
+    flex-direction: column !important;
+  }
+  .carouselDiv1 {
+    width: 100% !important;
+  }
+  .feedBackMainDiv {
+    flex-direction: column;
+  }
+  .firstDivFeedBackMain {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .imagesQues {
+    width: 100% !important;
+    padding: 2rem 1rem !important;
+  }
+  .ques {
+    width: 80% !important;
+    bottom: -9% !important;
+    right: 10% !important;
+  }
+  .totalPadding {
+    padding: 1rem !important;
+  }
+}

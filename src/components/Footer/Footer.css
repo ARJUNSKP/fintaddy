@@ -1,0 +1,19 @@
+li {
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .footerMainDiv {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footerFirstDiv {
+    width: 100% !important;
+  }
+  .footerScandentDiv {
+    width: 100% !important;
+  }
+  .footerDis {
+    width: auto !important;
+  }
+}
