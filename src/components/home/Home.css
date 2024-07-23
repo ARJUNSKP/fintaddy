@@ -40,6 +40,9 @@
   .mainSubDiv {
     width: 100% !important;
   }
+  .mainSubDiv1 {
+    align-items: start !important;
+  }
   .mainSubDiv img {
     width: 50% !important;
   }
@@ -48,7 +51,7 @@
   }
   .headingDiv {
     flex-direction: column !important;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
   }
   .cardMainDiv {
     flex-direction: column !important;

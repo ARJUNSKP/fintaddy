@@ -220,7 +220,7 @@ function Home() {
             />
           </div>
           <div
-            className="mainSubDiv"
+            className="mainSubDiv mainSubDiv1"
             style={{
               width: "50%",
               display: "flex",
