@@ -23,7 +23,7 @@
 }
 .headerTextAfter {
   color: #ee1d65;
-  border-bottom: 3px solid #ee1d65;
+  border-bottom: 3px solid #ffffff;
 }
 .navBarNotDisplay {
   display: none;
@@ -79,7 +79,7 @@
     width: 40px !important;
   }
   .businessSecondIcons {
-    width: 40px !important;
+    width: 53px !important;
   }
   .carousalDiv {
     flex-direction: column !important;
@@ -106,5 +106,8 @@
   }
   .totalPadding {
     padding: 1rem !important;
+  }
+  .addressList {
+    width: 85% !important;
   }
 }

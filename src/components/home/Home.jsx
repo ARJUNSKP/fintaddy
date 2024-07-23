@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+// import { CiBank } from "react-icons/ci";
 
 function Home() {
   const { hash } = useLocation();
@@ -308,6 +309,8 @@ function Home() {
           >
             {innovativeCard?.map((item, index) => (
               <div
+                data-aos="fade-up"
+                data-aos-duration="3000"
                 className="cardDiv"
                 key={index}
                 style={{
@@ -391,7 +394,7 @@ function Home() {
                   display: "inline-block",
                 }}
               ></span>
-              <label>About Us</label>
+              <label className="ps-2">About Us</label>
             </div>
             <label style={{ color: "#1F81DB", fontSize: "32px" }}>
               Experienced and Trusted
@@ -449,7 +452,7 @@ function Home() {
                   display: "inline-block",
                 }}
               ></span>
-              <label style={{ fontSize: "18px", paddingLeft: "0.5rem" }}>
+              <label className="ps-2" style={{ lineHeight: ".9rem" }}>
                 Our Services
               </label>
             </div>
@@ -483,7 +486,12 @@ function Home() {
               }}
             >
               {Business?.map((item, index) => (
-                <div key={index} style={{ display: "flex", gap: "1rem" }}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  key={index}
+                  style={{ display: "flex", gap: "1rem" }}
+                >
                   <div className="businessFirstIcons" style={{ width: "60px" }}>
                     <img
                       src={item?.icon}
@@ -513,6 +521,8 @@ function Home() {
               ))}
             </div>
             <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
               className="subDivBusiness"
               style={{
                 width: "30rem",
@@ -539,10 +549,20 @@ function Home() {
               }}
             >
               {Business2?.map((item, index) => (
-                <div key={index} style={{ display: "flex", gap: "1rem" }}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  key={index}
+                  style={{ display: "flex", gap: "1rem" }}
+                >
                   <div
                     className="businessSecondIcons"
-                    style={{ width: index == 1 ? "53px" : "90px" }}
+                    style={{
+                      width: "90px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
                   >
                     <img
                       src={item?.icon}
@@ -613,7 +633,7 @@ function Home() {
                     display: "inline-block",
                   }}
                 ></span>
-                <label style={{ fontSize: "18px", paddingLeft: "0.5rem" }}>
+                <label className="ps-2" style={{ lineHeight: "0.9rem" }}>
                   Our Team
                 </label>
               </div>
@@ -706,7 +726,12 @@ function Home() {
             </Carousel>
           </div>
         </div>
-        <div id="testimonials" style={{ width: "100%", padding: "4rem 0" }}>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          id="testimonials"
+          style={{ width: "100%", padding: "4rem 0" }}
+        >
           <div
             style={{
               display: "flex",
@@ -729,7 +754,10 @@ function Home() {
                   display: "inline-block",
                 }}
               ></span>
-              <label style={{ fontSize: "18px", paddingLeft: "0.5rem" }}>
+              <label
+                className="ps-2"
+                style={{ fontSize: "18px", lineHeight: "0.9rem" }}
+              >
                 Testimonials
               </label>
             </div>
@@ -827,10 +855,12 @@ function Home() {
                     display: "inline-block",
                   }}
                 ></span>
-                <label>Contact Us</label>
+                <label className="ps-2" style={{ fontSize: "18px" }}>
+                  Contact Us
+                </label>
               </div>
               <label style={{ color: "#1F81DB", fontSize: "32px" }}>
-                Experienced and Trusted
+                Reach Our Support Team
               </label>
               <small style={{ textAlign: "justify" }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -895,109 +925,124 @@ function Home() {
         </div>
       </div>
       <div
-        className="footerMainDiv"
         style={{
-          width: "100%",
-          padding: "2rem",
           display: "flex",
           backgroundColor: "#CDE7FF",
-          gap: "1rem",
+          flexDirection: "column",
         }}
       >
         <div
-          className="footerFirstDiv"
+          className="footerMainDiv"
           style={{
-            width: "55%",
+            width: "100%",
+            padding: "2rem",
             display: "flex",
-            flexDirection: "column",
+            backgroundColor: "#CDE7FF",
             gap: "1rem",
           }}
         >
-          <div style={{ width: "45%" }}>
-            <img
-              src={"/fintaddyLogo.svg"}
-              alt="..."
-              style={{ width: "100%", objectFit: "cover" }}
-            />
-          </div>
-          <small className="footerDis" style={{ width: "66%" }}>
-            Our mission is to provide exceptional accounting, tax, and financial
-            advisory services that empower our clients to reach their financial
-            goals. We strive to build long-lasting relationships based on trust,
-            integrity, and professionalism.
-          </small>
           <div
-            style={{ display: "flex", justifyContent: "start", gap: "1rem" }}
+            className="footerFirstDiv"
+            style={{
+              width: "55%",
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+            }}
           >
-            {socialMediaIcons?.map((item, index) => (
-              <div key={index}>
+            <div style={{ width: "45%" }}>
+              <img
+                src={"/fintaddyLogo.svg"}
+                alt="..."
+                style={{ width: "100%", objectFit: "cover" }}
+              />
+            </div>
+            <small className="footerDis" style={{ width: "66%" }}>
+              Our mission is to provide exceptional accounting, tax, and
+              financial advisory services that empower our clients to reach
+              their financial goals. We strive to build long-lasting
+              relationships based on trust, integrity, and professionalism.
+            </small>
+            <div
+              style={{ display: "flex", justifyContent: "start", gap: "1rem" }}
+            >
+              {socialMediaIcons?.map((item, index) => (
+                <div key={index}>
+                  <img
+                    src={item}
+                    alt="..."
+                    style={{ width: "100%", objectFit: "cover" }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div
+            className="footerScandentDiv"
+            style={{ width: "60%", display: "flex" }}
+          >
+            <div
+              style={{
+                width: "30%",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1.5rem",
+              }}
+            >
+              <strong>Quicklinks</strong>
+              <ul style={{ listStyle: "none", padding: "0" }}>
+                <li>
+                  <a
+                    href="#about"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#service"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>Blogs</li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    Testimonials
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              style={{
+                width: "60%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <div
+                className="addressList"
+                style={{ width: "65%", paddingTop: ".5rem" }}
+              >
                 <img
-                  src={item}
+                  src={"/assets/footer/address.svg"}
                   alt="..."
                   style={{ width: "100%", objectFit: "cover" }}
                 />
               </div>
-            ))}
-          </div>
-        </div>
-        <div
-          className="footerScandentDiv"
-          style={{ width: "60%", display: "flex" }}
-        >
-          <div
-            style={{
-              width: "30%",
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.5rem",
-            }}
-          >
-            <strong>Quicklinks</strong>
-            <ul style={{ listStyle: "none", padding: "0" }}>
-              <li>
-                <a
-                  href="#about"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  About us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#service"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  Services
-                </a>
-              </li>
-              <li>Blogs</li>
-              <li>
-                <a
-                  href="#testimonials"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  Contact us
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            style={{ width: "60%", display: "flex", justifyContent: "center" }}
-          >
-            <div style={{ width: "65%", paddingTop: ".5rem" }}>
-              <img
-                src={"/assets/footer/address.svg"}
-                alt="..."
-                style={{ width: "100%", objectFit: "cover" }}
-              />
             </div>
           </div>
         </div>
