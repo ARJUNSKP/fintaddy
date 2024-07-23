@@ -1002,7 +1002,9 @@ function Home() {
           </div>
         </div>
         <hr></hr>
-        <small>©2024 fintaddy.com - All rights reserved.</small>
+        <small style={{ display: "flex", justifyContent: "center" }}>
+          ©2024 fintaddy.com - All rights reserved.
+        </small>
       </div>
     </div>
   );
