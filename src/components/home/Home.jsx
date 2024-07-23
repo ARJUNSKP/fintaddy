@@ -27,13 +27,13 @@ function Home() {
     },
     {
       icon: "/assets/home/innovativeIcon2.svg",
-      title: "Innovative Solutions",
+      title: "Professional Team",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
       icon: "/assets/home/innovativeIcon3.svg",
-      title: "Innovative Solutions",
+      title: "24x7 Support",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
@@ -336,10 +336,9 @@ function Home() {
                     }}
                   />
                 </div>
-                <strong>Innovative Solutions</strong>
+                <strong>{item?.title}</strong>
                 <small style={{ width: "68%", textAlign: "justify" }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  {item?.description}
                 </small>
                 <small>
                   Read More <FaArrowRightLong />
@@ -530,7 +529,7 @@ function Home() {
                 justifyContent: "center",
               }}
             >
-              <div style={{ width: "25rem" }}>
+              <div style={{ width: "90%" }}>
                 <img
                   src={"/assets/home/business/image.svg"}
                   alt="..."
@@ -558,10 +557,7 @@ function Home() {
                   <div
                     className="businessSecondIcons"
                     style={{
-                      width: "90px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
+                      width: index == 1 ? "53px" : "95px",
                     }}
                   >
                     <img
