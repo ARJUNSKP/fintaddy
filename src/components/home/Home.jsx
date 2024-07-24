@@ -94,7 +94,12 @@ function Home() {
 
   return (
     <div>
-      <div style={{ width: "100%", backgroundColor: "#A7D5FF" }}>
+      <div
+        style={{
+          width: "100%",
+          backgroundImage: "linear-gradient(#A7D5FF, #FFFFFF)",
+        }}
+      >
         <nav
           className="navbar navbar-expand-lg px-2"
           style={{ backgroundColor: "transparent", padding: "2rem 1.5rem" }}
@@ -180,7 +185,7 @@ function Home() {
                 className={`nav-link headerWidth navigationTitle ${
                   hash == "#contact" ? "headerTextAfter" : ""
                 } `}
-                style={{ width: "91px" }}
+                style={{ width: "99px" }}
                 href="#contact"
                 onClick={() => {
                   setNavMenu(false);
@@ -206,7 +211,6 @@ function Home() {
             display: "flex",
             padding: "4rem 0",
             gap: "1rem",
-            backgroundImage: "linear-gradient(#A7D5FF, #FFFFFF)",
           }}
         >
           <div
